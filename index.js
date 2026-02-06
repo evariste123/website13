@@ -1,0 +1,33 @@
+import express from 'express';
+import home from './page/home.js';
+import getAbout from './controller/about.js';
+import getContact from './controller/contact.js';
+import header from './page/header.js';
+import getService from './controller/service.js';
+import getSearch from './controller/search.js';
+import getRegister from './controller/register.js';
+import getProfile from './controller/profile.js';
+import getProduct from './controller/product.js';
+import getLogin from './controller/login.js';
+import getJoin from './controller/join.js';
+import getBlog from './controller/blog.js'; 
+const app = express();
+const port = 51270;
+app.use('/header', header);
+app.use('/contact', getContact);
+app.use('/about', getAbout);
+app.use('/service', getService);
+app.use('/search', getSearch);
+app.use('/register', getRegister);
+app.use('/profile', getProfile);
+app.use('/product', getProduct);
+app.use('/login', getLogin);
+app.use('/join', getJoin);
+app.use('/blog', getBlog);
+app.use('/', home);
+app.get('/', (req, res) => {
+  res.send('welcome to my website,with more links to explore!');
+});
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
