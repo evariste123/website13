@@ -22,6 +22,7 @@ const getLogin = (req, res) => {
        justify-self:left;
        margin-left:10px;
        text-align:center;
+       bottom:20px;
        }
        .logo span{
        position:relative;
@@ -41,7 +42,7 @@ const getLogin = (req, res) => {
        font:20px bold;
        text-decoration:none;
        color:white;
-       bottom:20px;
+       bottom:40px;
        flex-wrap:wrap;
        }
        .social a:hover{
@@ -55,23 +56,23 @@ const getLogin = (req, res) => {
        width:100vw;
        justify-self:center;
        top:100px;
-       height:95vh;
+       height:110vh;
        background:linear-gradient(to bottom,skyblue,cyan,indigo);
        }
        .login h3{
        position:relative;
        text-align:center;
-       color:white;
+       color:black;
        text-transform:capitalize;
        font:20px bold;
        overflow:break-words;
-       top:20px;
+       top:50px;
        }
        .log{
        position:relative;
        text-align:center;
        width:60vw;
-       height:50vh;
+       height:auto;
        background-color:white;
        border:3px solid hsla(193, 36%, 95%, 1.00);
        border-radius:35px;
@@ -117,6 +118,82 @@ const getLogin = (req, res) => {
        color:blue;
        background:linear-gradient(to bottom,cyan,skyblue,indigo)
        }
+       .log h2{
+       position:relative;
+       top:60px;
+       }
+       .google{
+       position:relative;
+       justify-self:center;
+       top:150px;
+       }
+       .google button{
+       position:relative;
+       width:20vw;
+       height:7vh;
+       overflow-wrap:break-word;
+       background-color:white;
+       border:none;
+       border-radius:20px;
+       font-size:20px;
+       font-weight:900;
+       }
+       .google button:hover{
+       position:relative;
+       transition:all ease 0.3s;
+       cursor:pointer;
+       background:linear-gradient(to right,skyblue,white);
+       color:black;
+       text-shadow: 10px 10px  #460257ff;
+       }
+       .facebook{
+       position:relative;
+       justify-self:center;
+       top:200px;
+       }
+       .facebook button{
+       position:relative;
+       width:20vw;
+       height:7vh;
+       overflow-wrap:break-word;
+       background-color:white;
+       border:none;
+       border-radius:20px;
+       font-size:20px;
+       font-weight:900;
+       }
+       .facebook button:hover{
+        position:relative;
+       transition:all ease 0.3s;
+       cursor:pointer;
+       background:linear-gradient(to right,skyblue,white);
+       color:black;
+       text-shadow: 10px 10px  #0d11fcff;
+       }
+       .github{
+       position:relative;
+       justify-self:center;
+       top:250px;
+       }
+       .github button{
+      position:relative;
+       width:20vw;
+       height:7vh;
+       overflow-wrap:break-word;
+       background-color:white;
+       border:none;
+       border-radius:20px;
+       font-size:20px;
+       font-weight:900;
+       }
+       .github button:hover{
+        position:relative;
+       transition:all ease 0.3s;
+       cursor:pointer;
+       background:linear-gradient(to right,skyblue,white);
+       color:black;
+       text-shadow: 10px 10px  #fc0dfcff;
+       }
             </style>
       </head>
       <body>
@@ -136,19 +213,80 @@ const getLogin = (req, res) => {
         <a href="/search">search</a>
         </div>
         </div>
-        <form action="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
+        <form action="" id="Login">
         <div class="login" id="login">
         <h3>join us here! your data will be safe with us!</h3>
         <div class="log">
-        <input type="text" id="email" placeholder="enter your email" required>
+        <input type="text" id="Email" placeholder="enter your email" required>
         <br><br>
-        <input type="password" id="password" placeholder="enter your password" required>
+        <input type="password" id="Password" placeholder="enter your password" required>
         <br><br>
         <button type="submit">submit</button>
         <button type="reset">reset</button>
+        <h2>login with social media</h2>
+        </div>
+        <div class="google">
+        <a href="">
+        <button type="click"><span style="color:blue">G</span><span style="color:red">o</span><span style="color:gold">o</span><span style="color:blue">g</span><span style="color:green">l</span><span style="color:red">e</span></button>
+        </a>
+        </div>
+        <div class="facebook">
+        <a href="">
+        <button type="facebook">facebook</button>
+        </a>
+        </div>
+        <div class="github">
+        <a href="">
+        <button type="github">Github</button>
+        </a>
         </div>
         </div>
         </form>
+       <script>
+    let Login = document.getElementById("Login");
+
+    Login.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const Email = document.getElementById("Email").value;
+        const Password = document.getElementById("Password").value;
+
+        console.log("my Email: " + Email);
+        console.log("my password: " + Password);
+
+        alert("welcome!");
+      
+
+        if (Password !== Password)
+        {
+        alert("password is not equal to database!");
+        return;
+        }
+    });
+
+
+
+    let Login1 = document.getElementById("Login");
+
+    Login.addEventListener('reset', () => {
+
+        const Email = document.getElementById("Email")
+        const Password = document.getElementById("Password");
+
+        console.log("my Email: " + ('null'));
+        console.log("my password: " + ('null'));
+
+        alert("welcome!");
+      
+
+        if (Password !== Password)
+        {
+        alert("password is not equal to database!");
+        return;
+        }
+    });
+</script>
+
       </body>
       </html>
       `);

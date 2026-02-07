@@ -61,7 +61,7 @@ const getRegister = (req, res) => {
        position:relative;
        text-align:center;
        font:20px bold;
-       top:20px;
+       top:150px;
        text-transform:capitalize;
        animation-name:regi;
        animation-delay:5s;
@@ -83,7 +83,7 @@ const getRegister = (req, res) => {
        position:relative;
        width:60vw;
        height:auto;
-       top:100px;
+       top:250px;
        justify-self:center;
        text-align:center;
        background-color:transparent;
@@ -168,27 +168,91 @@ const getRegister = (req, res) => {
         <a href="/search">search</a>
         </div>
         </div>
-        <div class="register" id="register">
+        <div class="register" id="myForm">
         <h3>register here!</h3>
-        <form action="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" id="register">
+        <form action="" id="register">
         <div class="regi">
         <input type="text" id="fname" placeholder="your first name" required><input type="text" id="lname" placeholder="your last name" required>
         <br><br>
-        <input type=" id="Email" placeholder="your Email" required><input type="date" id="date" placeholder="your birthdate" required>
+        <input type="text" id="Email" placeholder="your Email" required><input type="date" id="date" placeholder="your birthdate" required>
         <br><br>
-        <select onclick="sample" id="genger">
+        <select type="gender" id="Gender">
         <option value="gender">..Gender..</option>
         <option value="female">female</option>
         <option value="male">male</option>
         <option value="no choosen">no choosen</option>
-        </select><input type="password" id="password" placeholder="your new password" required>
+        </select><input type="password" id="Password" placeholder="your new password" required>
         <br><br>
-        <input type="password" id"retype" placeholder="confirm your password" required><input type="time" id="time" placeholder="your time submitted" required>
+        <input type="password" id="retype" placeholder="confirm your password" required><input type="time" id="time" placeholder="your time submitted" required>
         <br><br>
         <button type="submit">submit</button>
         <button type="reset">reset</button>
         </div>
         </form>
+        <script>
+    let myForm = document.getElementById("myForm");
+
+    myForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const Email = document.getElementById("Email").value;
+        const Gender = document.getElementById("Gender").value;
+        const Password = document.getElementById("Password").value;
+        const retype = document.getElementById("retype").value;
+
+        console.log("my first name: " + fname);
+        console.log("my last name: " + lname);
+        console.log("my date: " + date);
+        console.log("my time: " + time);
+        console.log("my Email: " + Email);
+        console.log("my Gender: " + Gender);
+        console.log("my new Password: " + Password);
+        console.log("my confirm password: " + retype);
+
+        alert("You have been registered. Your account is updated!");
+
+        if (Password !== retype) {
+    alert("Passwords do not match!");
+    return;
+}
+    });
+
+
+    let myForm1 = document.getElementById("myForm");
+
+    myForm.addEventListener('reset', () => {
+        
+
+        const fname = document.getElementById("fname");
+        const lname = document.getElementById("lname");
+        const date = document.getElementById("date");
+        const time = document.getElementById("time");
+        const Email = document.getElementById("Email");
+        const Gender = document.getElementById("Gender");
+        const Password = document.getElementById("Password");
+        const retype = document.getElementById("retype");
+
+        console.log("my first name: " + ('null'));
+        console.log("my last name: " + ('null'));
+        console.log("my date: " + ('null'));
+        console.log("my time: " + ('null'));
+        console.log("my Email: " + ('null'));
+        console.log("my Gender: " + ('null'));
+        console.log("my new Password: " + ('null'));
+        console.log("my confirm password: " + ('null'));
+
+        alert("You have been registered. Your account is updated!");
+
+        if (Password !== retype) {
+    alert("Passwords do not match!");
+    return;
+}
+    });
+</script>
       </body>
       </html>
       `);
