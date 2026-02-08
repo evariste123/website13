@@ -248,23 +248,25 @@ const getLogin = (req, res) => {
     Login.addEventListener('submit', (e) => {
         e.preventDefault();
 
+        const numberPattern = /^[0-9]+$/;
         const Email = document.getElementById("Email").value;
         const Password = document.getElementById("Password").value;
 
         console.log("my Email: " + Email);
-        console.log("my password: " + Password);
+        console.log("my password: " +  Password);
 
-        alert("welcome!");
+
+        alert("              you have done to login to your account!       ");
       
 
-        if (Password !== Password)
-        {
-        alert("password is not equal to database!");
-        return;
-        }
+if (!numberPattern.test(Password)) {
+  alert("Password must contain only numbers!");
+  return false;
+} else {
+  alert("Password is correct!");
+  return true;
+}
     });
-
-
 
     let Login1 = document.getElementById("Login");
 
@@ -276,7 +278,7 @@ const getLogin = (req, res) => {
         console.log("my Email: " + ('null'));
         console.log("my password: " + ('null'));
 
-        alert("welcome!");
+        alert("your account is opening...");
       
 
         if (Password !== Password)

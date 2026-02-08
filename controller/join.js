@@ -145,18 +145,18 @@ const getLogin = (req, res) => {
         <a href="/search">search</a>
         </div>
         </div>
-        <form action="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" id="form">
+        <form action=""  id="myForm">
         <div class="join" id="join">
         <h3>join us here! your data will be safe with us!</h3>
         <div class="jon">
-        <input type="text" id="fname" placeholder="enter your full name" required>
+        <input type="text" id="Fname" placeholder="enter your full name" required >
         <br><br>
-        <input type="text" id="email" placeholder="enter your email" required>
+        <input type="text" id="Email" placeholder="enter your email" required>
         <br><br>
-        <input type="password" id="password" placeholder="enter your password" required>
+        <input type="password" id="Password" placeholder="enter your password" required>
         <br><br>
         <div class="chech">
-        <input type="checkbox" id="checkbox" required> <br>
+        <input type="checkbox" id="Checkbox" required> <br>
         <h4>Rememeber me to continue with site.</h4>
         </div>
         <button type="submit">submit</button>
@@ -164,6 +164,57 @@ const getLogin = (req, res) => {
         </div>
         </div>
         </form>
+        <script>
+        let myForm = document.getElementById("myForm");
+
+        myForm.addEventListener('submit',(e)=>{
+
+        e.preventDefault();
+
+        let Fname = document.getElementById("Fname").value;
+        let Email = document.getElementById("Email").value;
+        let Password = document.getElementById("Password").value;
+        let Checkbox = document.getElementById("Checkbox").value;
+        
+        console.log("my full name:" ,Fname);
+        console.log("my Email:" ,Email);
+        console.log("my password:" ,Password);
+        console.log("my checkbox:" ,Checkbox);
+        
+        
+        alert("Now you are join us!");
+        
+        if ( Password !== 'Password' )
+        {
+        alert("check your password is correct!");
+        return false;
+        }
+        else if ( myForm !=='' )
+        {
+        alert("before you proceed check if all field is completed!");
+        return true;
+        }
+        else
+        {
+         alert("none field is complete!")
+         }
+});
+
+
+        let myForm1 = document.getElementById("myForm1");
+
+        myForm.addEventListener('reset',()=>{
+
+        console.log("my full name:" ,);
+        console.log("my Email:" ,);
+        console.log("my password:" ,);
+        console.log("my checkbox:" ,);
+        {
+        alert(" Account  is  loading....   ");
+        }
+        });
+
+        </script>
       </body>
       </html>`
    );

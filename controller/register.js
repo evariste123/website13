@@ -216,9 +216,18 @@ const getRegister = (req, res) => {
         alert("You have been registered. Your account is updated!");
 
         if (Password !== retype) {
-    alert("Passwords do not match!");
-    return;
+    alert("Passwords do not match! please try again your confirmation password!");
+    return false;
 }
+    else if ( Password !=='' ){
+    alert(" your password is correct!");
+    return true;
+    }
+    else
+    {
+        alert("none account here!");
+        return;
+        }
     });
 
 
@@ -245,12 +254,7 @@ const getRegister = (req, res) => {
         console.log("my new Password: " + ('null'));
         console.log("my confirm password: " + ('null'));
 
-        alert("You have been registered. Your account is updated!");
-
-        if (Password !== retype) {
-    alert("Passwords do not match!");
-    return;
-}
+        alert("Welcome. Your account is loading...!");
     });
 </script>
       </body>

@@ -51,7 +51,7 @@ const getAbout = (req, res) => {
        transition:all ease 0.3s;
        color:purple;
        }
-       #about.container{
+       #About.container{
        position:relative;
        width:100vw;
        height:80vh;
@@ -175,7 +175,7 @@ const getAbout = (req, res) => {
         <a href="/search">search</a>
         </div>
         </div>
-        <section class="container" id="about">
+        <section class="container" id="About">
           <div class="hero-text">
             <h1>professional <span style="color: blue;">web solutions</span>
             for your business via to Eva-Codes</h1>
@@ -219,6 +219,16 @@ const getAbout = (req, res) => {
         </p>
       </div>
     </section>
+    <script>
+    const About = document.getElementById("About");
+
+About.addEventListener("open", (e) => {
+  e.preventDefault();
+  
+  alert("Welcome to About page");
+});
+
+    </script>
       </body>
       </html>
       `);
