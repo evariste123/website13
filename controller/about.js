@@ -16,7 +16,7 @@ const getAbout = (req, res) => {
        padding:10px;
        justify-items:end;
        top:0px;
-       overflow:break-words;
+       overflow-wrap:break-word;
        }
        .logo{
        position:relative;

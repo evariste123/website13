@@ -23,6 +23,7 @@ const getBlog = (req, res) => {
        justify-self:left;
        margin-left:10px;
        text-align:center;
+       bottom:20px;
        }
        .logo span{
        position:relative;
@@ -43,7 +44,7 @@ const getBlog = (req, res) => {
        font:20px bold;
        text-decoration:none;
        color:white;
-       bottom:20px;
+       bottom:50px;
        flex-wrap:wrap;
        }
        .social a:hover{
@@ -58,7 +59,7 @@ const getBlog = (req, res) => {
        .plot{
        position:relative;
   background:linear-gradient(to bottom,white,skyblue,cyan);
-  top:700px;
+  top:110px;
   justify-self:center;
   width:80vw;
   height:70vh;
@@ -79,7 +80,7 @@ const getBlog = (req, res) => {
        width:100vw;
        height:auto;
        background-color:#000;
-       top:680px;
+       top:100px;
        justify-self:center;
        text-align:center;
        color:white;
@@ -196,6 +197,59 @@ border:none;
 cursor:pointer;
 border-radius:0px;
 }
+.container{
+position:relative;
+width:100vw;
+height:80vh;
+justify-self:center;
+background:transparent;
+color:black;
+top:105px;
+}
+.container h2{
+text-align:center;
+position:relative;
+top:30px;
+overflow-wrap:wrap;
+font-weight:500;
+font-size:20px;
+font-style:italic;
+}
+.conta{
+position:absolute;
+width:100vw;
+justify-self:center;
+top:195px;
+height:50vh;
+border-radius:50%  50% 0 0;
+background-color: skyblue; 
+}
+.conta1{
+position:absolute;
+width:100vw;
+justify-self:center;
+top:100px;
+height:50vh;
+border-radius:500px 500px 0 0;
+background-color: lightblue;
+animation-name:conta1;
+animation-timing-function:300ms;
+animation-delay:10s;
+animation-iteration-count:infinite;
+animation-duration:3s;
+}
+@keyframes conta1{
+from{
+background-color:transparent;
+color:blue;
+transition:all ease;
+
+}
+to{
+background-color:lightbgrey;
+color:blue;
+}
+}
             </style>
       </head>
       <body>
@@ -216,7 +270,14 @@ border-radius:0px;
         </div>
         </div>
       <section class="container">
-
+      <div class="card1">
+     <h2>welcome to my blog website eva-codes</h2>
+      </div>
+      <div class="conta1">
+      <h2>Explorer your business!</h2>
+      </div>
+      <div class="conta">
+      </div>
       </section>
       <section class="plot">
          <div class="card" id="myPlot"></div>

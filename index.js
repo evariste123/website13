@@ -13,6 +13,8 @@ import getJoin from './controller/join.js';
 import getBlog from './controller/blog.js'; 
 const app = express();
 const port = 51270;
+// const multer = require("multer");
+// const path = require("path");
 app.use('/header', header);
 app.use('/contact', getContact);
 app.use('/about', getAbout);

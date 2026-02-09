@@ -131,13 +131,18 @@ const getHeader = (req, res) => {
        border-radius:0 60px 0 60px;
        overflow-wrap:break-word;
        background-color:violet;
-       bottom:945px;
+       top:230px;
        transform:translate(50%);
        animation-name:head2;
        animation-duration:10s;
        animation-delay:15s;
        animation-timing-function:300ms;
        animation-iteration-count:infinite;
+       }
+       .@media (max-width:600px;){
+       .head2{
+       bottom:900px;
+       }
        }
        @keyframes head2{
        from{
