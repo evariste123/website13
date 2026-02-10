@@ -58,13 +58,13 @@ const getBlog = (req, res) => {
        }
        .plot{
        position:relative;
-  background:linear-gradient(to bottom,white,skyblue,cyan);
-  top:110px;
-  justify-self:center;
-  width:80vw;
-  height:70vh;
-  border:2px solid #390249cc;
-  border-radius:20px;
+       background:linear-gradient(to bottom,white,skyblue,cyan);
+       bottom:100px;
+       justify-self:center;
+       width:80vw; 
+       height:70vh;
+       border:2px solid #390249cc;
+       border-radius:20px;
        }
        .card{
        top:50px;
@@ -221,17 +221,22 @@ width:100vw;
 justify-self:center;
 top:195px;
 height:50vh;
+text-align:center;
 border-radius:50%  50% 0 0;
 background-color: skyblue; 
+border-top:3px solid purple;
 }
 .conta1{
 position:absolute;
 width:100vw;
 justify-self:center;
 top:100px;
+text-align:center;
 height:50vh;
 border-radius:500px 500px 0 0;
 background-color: lightblue;
+border-left:3px solid blue;
+border-right:3px solid yellow;
 animation-name:conta1;
 animation-timing-function:300ms;
 animation-delay:10s;
@@ -246,9 +251,115 @@ transition:all ease;
 
 }
 to{
-background-color:lightbgrey;
+background-color:#000;;
 color:blue;
 }
+}
+.conta1 button{
+position:relative;
+width:20vw;
+height:10vh;
+overflow-wrap:wrap;
+font-weight:900;
+font-style:italic;
+cursor:pointer;
+border:1px solid white;
+background-color:#000;
+color:white;
+border-radius:10px;
+justify-self:center;
+top:5px;
+}
+.conta1 button:hover{
+position:relative;
+transition:all ease 0.3s;
+cursor:pointer;
+color:white;
+background:linear-gradient(to right,skyblue,indigo);
+border-radius:0px;
+border:1px solid black;
+}
+.button1{
+position:relative;
+justify-selft:left;
+margin-left:20px;
+top:25px;
+}
+.button1 button{
+position:realtive;
+width:120px;
+height:120px;
+font-size:20px;
+overflow-wrap:wrap;
+border-radius:60px;
+background-color:darkblue;
+color:white;
+border:none;
+}
+.button1 button:hover{
+position:relative;
+background-color:darkorange;
+color:black;
+cursor:pointer;
+}
+.button2{
+position:absolute;
+justify-self:center;
+top:990px;
+}
+.button2 button{
+position:realtive;
+width:120px;
+height:120px;
+overflow-wrap:wrap;
+border-radius:60px;
+font-size:20px;
+background-color:darkorange;
+color:white;
+border:none;
+}
+.button2 button:hover{
+position:relative;
+background-color:darkcyan;
+color:black;
+cursor:pointer;
+}
+@media (max-width:600px){
+.button2{
+position:relative
+gap:20px;
+top:40%;
+}
+}
+.button3{
+position:absolute;
+justify-self:right;
+margin-right:20px;
+top:990px;
+}
+@media (max-width:600px){
+.button3 {
+position:relative
+gap:20px;
+top:45%;
+}
+}
+.button3 button{
+position:realtive;
+width:120px;
+height:120px;
+overflow-wrap:wrap;
+font-size:20px;
+border-radius:60px;
+background-color:darkcyan;
+color:white;
+border:none;
+}
+.button3 button:hover{
+position:relative;
+background-color:gold;
+color:black;
+cursor:pointer;
 }
             </style>
       </head>
@@ -274,13 +385,24 @@ color:blue;
      <h2>welcome to my blog website eva-codes</h2>
       </div>
       <div class="conta1">
-      <h2>Explorer your business!</h2>
+     <a href=""><button type="button"> Explorer your business</button></a>
       </div>
       <div class="conta">
       </div>
       </section>
       <section class="plot">
          <div class="card" id="myPlot"></div>
+</section>
+<section class="conta2">
+<div class="button1">
+<a href=""><button type="button">Home business</button></a>
+</div>
+<div class="button2">
+<a href=""><button type="button">Roaming</button></a>
+</div>
+<div class="button3">
+<a href=""><button type="button">Help?</button></a>
+</div>
 </section>
 <section class="footer">
 
@@ -311,15 +433,14 @@ color:blue;
         <div class="google">
         <h2>our location from google map & contact us:!</h2>
         <h4>contact us:</h4>
-        <form action="" id="myForm">
-        <input type="text" id="fname" required placeholder="Your full name">
+        <form action="/myForm" id="myForm">
+        <input type="text" name="fname" id="Fname" required placeholder="Your full name">
         <br><br>
-        <input type="text" id="email" placeholder="your Email" required>
+        <input type="text" name="Email" id="Email" placeholder="your Email" required>
         <br><br>
-        <input type="password" id="password" required placeholder="Your password">
+        <input type="password" name="Password" id="Password" required placeholder="Your password">
         <br><br>
-        <textarea id="comments" name="comments"  style="width:30vw;height:15vh;position:relative;
-        border:1px solid white;color:white;background-color:transparent;border-radius:10px;">
+        <textarea id="Comments" name="comments"  style="width:30vw;height:15vh;position:relative;border:1px solid white;color:white;background-color:transparent;border-radius:10px;">
   Enter text here...
 </textarea>
         <br><br>
@@ -349,8 +470,8 @@ color:blue;
         const data =[{
             x:x,
             y:y,
-            type:"dot",
-            arientation:"dot",
+            type:"bar",
+            arientation:"v",
             marker:{color:"green"}
         }];
        const layout = {title:"Eastern Africa Community (EAC) production(GDP) according to Percentges"};
@@ -359,8 +480,31 @@ color:blue;
         window.addEventListener('resize', () => {
   Plotly.Plots.resize('myPlot');
 });
+</script>
+<script>
+  const myForm = document.getElementById("myForm");
 
-    </script>
+  myForm.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+
+    const Fname = document.getElementById("Fname").value;
+    const Email = document.getElementById("Email").value;
+    const Password = document.getElementById("Password").value;
+    const Comments = document.getElementById("Comments").value;
+
+    console.log("My first name:", Fname);
+    console.log("My Email:", Email);
+    console.log("My Password:", Password);
+    console.log("My Comments:", Comments);
+
+    alert("Your message has been sent!");
+  });
+  myForm.reset();
+{
+  alert("you're welcome to my blog 2026!");
+  }
+</script>
+
       </body>
       </html>
       `);

@@ -552,7 +552,7 @@ const getHome = (req, res) => {
       </style>
     </head>
     <body>
-      <div class="container">
+      <div class="container" id="container">
         <header>
           <div style="animation: fadeInDown 0.5s ease-out; margin-bottom: 20px;">
             <h1 id="welcome" style="animation: colorShift 4s linear infinite;">Evariste Data System</h1>
@@ -617,6 +617,7 @@ location: <a href="/contact">full our info</a
         </p>
         </div>
         </section>
+        
     </body>
     </html>
 

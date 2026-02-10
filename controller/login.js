@@ -268,25 +268,10 @@ if (!numberPattern.test(Password)) {
 }
     });
 
-    let Login1 = document.getElementById("Login");
-
-    Login.addEventListener('reset', () => {
-
-        const Email = document.getElementById("Email")
-        const Password = document.getElementById("Password");
-
-        console.log("my Email: " + ('null'));
-        console.log("my password: " + ('null'));
-
-        alert("your account is opening...");
-      
-
-        if (Password !== Password)
-        {
-        alert("password is not equal to database!");
-        return;
-        }
-    });
+    Login.reset();
+    {
+    alert("welcome to login account!");
+    }
 </script>
 
       </body>

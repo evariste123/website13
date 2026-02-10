@@ -49,10 +49,17 @@ res.send(`
        transition:all ease 0.3s;
        color:purple;
        }
+       .image{
+       position:relative;
+       justify-self:center;
+       top:100px;
+       background-color:yellow;
+       }
             </style>
       </head>
       <body>
       <div class="quick">
+      
      <div class="logo"><h2>Nodejs <span>website</span></h2></div>
         <div class="social">
          <a href="/">home</a>
@@ -68,6 +75,9 @@ res.send(`
         <a href="/search">search</a>
         </div>
         </div>
+        <section class="image">
+         <img src="/home/coding/website13/image/eva.png" alt="Logo" width="200">
+        </section>
       </body>
       </html>
     `);

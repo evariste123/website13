@@ -170,7 +170,7 @@ const getLogin = (req, res) => {
         myForm.addEventListener('submit',(e)=>{
 
         e.preventDefault();
-
+        const input =(/^[0-9]*/);
         let Fname = document.getElementById("Fname").value;
         let Email = document.getElementById("Email").value;
         let Password = document.getElementById("Password").value;
@@ -184,12 +184,12 @@ const getLogin = (req, res) => {
         
         alert("Now you are join us!");
         
-        if ( Password !== 'Password' )
+        if ( Password !== 'input' )
         {
-        alert("check your password is correct!");
-        return false;
+        alert(" your password is correct!");
+        return true;
         }
-        else if ( myForm !=='' )
+        else if ( myForm !== input )
         {
         alert("before you proceed check if all field is completed!");
         return true;
@@ -199,20 +199,10 @@ const getLogin = (req, res) => {
          alert("none field is complete!")
          }
 });
-
-
-        let myForm1 = document.getElementById("myForm1");
-
-        myForm.addEventListener('reset',()=>{
-
-        console.log("my full name:" ,);
-        console.log("my Email:" ,);
-        console.log("my password:" ,);
-        console.log("my checkbox:" ,);
+myForm.reset();
         {
-        alert(" Account  is  loading....   ");
+        alert(" welcome to joining....   ");
         }
-        });
 
         </script>
       </body>

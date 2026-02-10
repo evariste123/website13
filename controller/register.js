@@ -223,38 +223,11 @@ const getRegister = (req, res) => {
     alert(" your password is correct!");
     return true;
     }
-    else
+    myForm.reset();
     {
-        alert("none account here!");
-        return;
-        }
-    });
-
-
-    let myForm1 = document.getElementById("myForm");
-
-    myForm.addEventListener('reset', () => {
-        
-
-        const fname = document.getElementById("fname");
-        const lname = document.getElementById("lname");
-        const date = document.getElementById("date");
-        const time = document.getElementById("time");
-        const Email = document.getElementById("Email");
-        const Gender = document.getElementById("Gender");
-        const Password = document.getElementById("Password");
-        const retype = document.getElementById("retype");
-
-        console.log("my first name: " + ('null'));
-        console.log("my last name: " + ('null'));
-        console.log("my date: " + ('null'));
-        console.log("my time: " + ('null'));
-        console.log("my Email: " + ('null'));
-        console.log("my Gender: " + ('null'));
-        console.log("my new Password: " + ('null'));
-        console.log("my confirm password: " + ('null'));
-
-        alert("Welcome. Your account is loading...!");
+    alert("welcome to registering account");
+    return true;
+    }
     });
 </script>
       </body>
