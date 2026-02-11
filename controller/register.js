@@ -224,11 +224,10 @@ const getRegister = (req, res) => {
     return true;
     }
     myForm.reset();
-    {
-    alert("welcome to registering account");
-    return true;
-    }
     });
+</script>
+<script>
+alert("welcome to registering account");
 </script>
       </body>
       </html>

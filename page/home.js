@@ -617,7 +617,9 @@ location: <a href="/contact">full our info</a
         </p>
         </div>
         </section>
-        
+        <script>
+alert("welcome to my website!");
+</script>
     </body>
     </html>
 

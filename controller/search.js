@@ -124,6 +124,7 @@ const getRearch = (req,res)=>{
        .form input{
        position:relative;
        width:30vw;
+       color:white;
        height:6vh;
        background-color:#000;
        border:1px solid white;
@@ -209,8 +210,8 @@ const getRearch = (req,res)=>{
         <h2>welcome to SearchDeepAI 2026 new Models</h2>
         <div class="form">
         <h3>stay update with us to get all!</h3>
-        <form action="">
-        <input type="text" id="email" required placeholder="Your Email..."><button type="submit">send</button>
+        <form action="" id="myForm">
+        <input type="text" id="Email" required placeholder="Your Email..."><button type="submit">send</button>
         </form>
         </div>
         <div class="foot">
@@ -219,6 +220,22 @@ const getRearch = (req,res)=>{
         </p>
         </div>
         </section>
+        <script>
+        let myForm = document.getElementById("myForm");
+
+        myForm.addEventListener('submit',(e)=>{
+          e.preventDefault(e);
+
+          const Email = document.getElementById("Email").value;
+
+          console.log("my Email:" ,Email);
+          {
+          alert("fetching data....");
+          return;
+          }
+          myForm.reset();
+          });
+        </script>
       </body>
       </html>
         `);    
